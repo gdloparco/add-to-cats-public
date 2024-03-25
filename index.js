@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import DOMPurify from 'https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.1/purify.min.js';
 
 const appSettings = {
     databaseURL: "https://realtime-database-92e0e-default-rtdb.europe-west1.firebasedatabase.app/"
@@ -15,8 +16,9 @@ const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
+    let cleanInputValue = DOMPurify.sanitize(inputValue); // Sanitize input
     
-    push(shoppingListInDB, inputValue)
+    push(shoppingListInDB, cleanInputValue)
     
     clearInputFieldEl()
 })
