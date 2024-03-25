@@ -2,10 +2,11 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 import DOMPurify from 'https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.1/purify.min.js';
 
-const appSettings = {
-    databaseURL: "https://realtime-database-92e0e-default-rtdb.europe-west1.firebasedatabase.app/"
-}
+const databaseURL = process.env.FIREBASE_DATABASE_URL
 
+const appSettings = {
+    databaseURL: databaseURL
+}
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const shoppingListInDB = ref(database, "shoppingList")
