@@ -1,5 +1,5 @@
 {
-  "name": "Add to Cats",
+  "name": "add-to-cats",
   "dependencies": {},
   "devDependencies": {
     "vite": "latest"
