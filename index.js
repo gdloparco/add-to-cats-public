@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 import DOMPurify from 'https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.1/purify.min.js';
 
-const databaseURL = process.env.FIREBASE_DATABASE_URL
+const databaseURL = process.env.FIREBASE_DATABASE_URL;
 
 const appSettings = {
     databaseURL: databaseURL
