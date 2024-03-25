@@ -1,8 +1,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
+const databaseURL = process.env.FIREBASE_DATABASE_URL;
+
 const appSettings = {
-    databaseURL: "https://realtime-database-92e0e-default-rtdb.europe-west1.firebasedatabase.app/"
+    databaseURL: databaseURL
 }
 
 const app = initializeApp(appSettings)
