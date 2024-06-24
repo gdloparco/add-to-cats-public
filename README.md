@@ -5,7 +5,7 @@ Add to Cats is a simple web application that allows users to maintain a shopping
 
 - **Realtime Updates**: Items added or removed from the shopping list are immediately reflected across all clients.
 - **Persistent Storage**: Data is stored securely in Firebase, ensuring data integrity and availability.
-- **Responsive Design**: The interface is designed to work seamlessly across different devices and screen sizes.
+- **Intuitive Design**: The layout and functionality are crafted to ensure an effortless user experience..
 
 ## Technologies Used
 
